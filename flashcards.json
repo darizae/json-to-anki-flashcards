@@ -1,0 +1,14 @@
+[
+  {
+    "question": "What is the determinant of a matrix?",
+    "answer": "The determinant is a scalar value that uniquely corresponds to a square matrix. It provides important information about the matrix, including whether it is invertible."
+  },
+  {
+    "question": "What are some uses of the determinant in linear algebra?",
+    "answer": "1. **Invertibility**: A matrix is invertible if and only if its determinant is non-zero. \\n2. **Volume Scaling**: The absolute value of the determinant of a matrix represents the scale factor by which the linear transformation (described by the matrix) scales volumes. \\n3. **Eigenvalues and Characteristic Polynomial**: Determinants are used in finding eigenvalues and in forming the characteristic polynomial of a matrix. \\n4. **Solving Linear Systems**: Determinants are used in Cramer's Rule for solving systems of linear equations when the matrix is square and invertible."
+  },
+  {
+    "question": "How is a matrix being invertible related to it being non-singular, and why does this intuitively make sense?",
+    "answer": "A matrix is invertible if it has an inverse matrix, and it is non-singular if its determinant is non-zero. These two concepts are directly related: a non-zero determinant implies the matrix is invertible, and vice versa. Intuitively, this makes sense because the determinant reflects the matrix's ability to map vectors in a way that preserves or changes volume but doesn't reduce it to zero. A determinant of zero would mean that the transformation collapses the space into a lower dimension (e.g., a plane or line), making it impossible to uniquely reverse (or invert) the transformation. Therefore, non-singular (non-zero determinant) matrices are invertible as they preserve the dimensionality of the space, allowing for a unique reversal."
+  }
+]
