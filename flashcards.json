@@ -1,14 +1,150 @@
 [
   {
-    "question": "What is the determinant of a matrix?",
-    "answer": "The determinant is a scalar value that uniquely corresponds to a square matrix. It provides important information about the matrix, including whether it is invertible."
+    "question": "Write the posterior distribution of the parameters given the data. Clearly identify and label the prior, likelihood, and evidence components in your response.",
+    "answer": ""
   },
   {
-    "question": "What are some uses of the determinant in linear algebra?",
-    "answer": "1. **Invertibility**: A matrix is invertible if and only if its determinant is non-zero. \\n2. **Volume Scaling**: The absolute value of the determinant of a matrix represents the scale factor by which the linear transformation (described by the matrix) scales volumes. \\n3. **Eigenvalues and Characteristic Polynomial**: Determinants are used in finding eigenvalues and in forming the characteristic polynomial of a matrix. \\n4. **Solving Linear Systems**: Determinants are used in Cramer's Rule for solving systems of linear equations when the matrix is square and invertible."
+    "question": "Describe the optimal decision boundary for a classification scenario involving two classes. Each class follows a class-conditional distribution represented as a bivariate normal distribution: \\(N(\\begin{pmatrix} 0 \\\\ 0 \\end{pmatrix}, \\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix})\\) and \\(N(\\begin{pmatrix} 0 \\\\ 0 \\end{pmatrix}, \\begin{pmatrix} 4 & 0 \\\\ 0 & 4 \\end{pmatrix})\\).",
+    "answer": ""
   },
   {
-    "question": "How is a matrix being invertible related to it being non-singular, and why does this intuitively make sense?",
-    "answer": "A matrix is invertible if it has an inverse matrix, and it is non-singular if its determinant is non-zero. These two concepts are directly related: a non-zero determinant implies the matrix is invertible, and vice versa. Intuitively, this makes sense because the determinant reflects the matrix's ability to map vectors in a way that preserves or changes volume but doesn't reduce it to zero. A determinant of zero would mean that the transformation collapses the space into a lower dimension (e.g., a plane or line), making it impossible to uniquely reverse (or invert) the transformation. Therefore, non-singular (non-zero determinant) matrices are invertible as they preserve the dimensionality of the space, allowing for a unique reversal."
+    "question": "Evaluate the following statements and decide whether each is correct: 1. (Specific statement regarding L1 and possibly L2 loss needs details) 2. 'Logistic loss is generally more suitable for classification tasks than L2 loss.' 3. 'L2 regularization tends to produce sparse models.' 4. (Specific statement about L1 regularization needs details)",
+    "answer": ""
+  },
+  {
+    "question": "Illustrate a scenario with \\(n = 10\\) data points where the classes in a binary classification setting are not linearly separable. Propose a feature mapping \\(\\phi\\) such that in the transformed feature space, the classes become linearly separable. Provide a sketch demonstrating the feature space and decision boundary.",
+    "answer": ""
+  },
+  {
+    "question": "Provide three examples of unsupervised learning disciplines, and associate a specific method with each.",
+    "answer": ""
+  },
+  {
+    "question": "Evaluate four different partitions of a rectangular area into polygons to determine which ones could represent a decision tree: 1. Partition with non-axis-aligned, non-rectangular polygons. 2. Partition with only axis-aligned polygons, including one L-shaped polygon. 3. Two partitions that accurately represent decision trees.",
+    "answer": ""
+  },
+  {
+    "question": "What is the probabilistic assumption underlying L2 regularization?",
+    "answer": ""
+  },
+  {
+    "question": "Between a multi-layer perceptron (MLP) and a convolutional neural network (CNN), which has more parameters? Which requires more floating-point operations to process an image, the MLP or the CNN?",
+    "answer": ""
+  },
+  {
+    "question": "Create and solve an original problem related to the contents of this lecture. Points will be awarded based on the originality, difficulty, and correctness of your solution. Problems copied from this or the mock exam will not receive points.",
+    "answer": ""
+  },
+  {
+    "question": "1a) Define the product rule in probability. Using this rule, derive Bayes' theorem. 1b) Sketch the two-dimensional Gaussian distribution represented by the formula: \\[ \\frac{1}{(2\\pi)^{D/2} |\\Sigma|^{1/2}} \\exp\\left(-\\frac{1}{2}(x-\\mu)^T \\Sigma^{-1} (x-\\mu)\\right) \\] with \\(\\mu = [0, -1]^T\\) and \\(\\Sigma = \\left[ \\begin{array}{rr}1 & 1\\\\1 & 4\\\\\\end{array}\\right]\\).",
+    "answer": ""
+  },
+  {
+    "question": "2a) Discuss why optimizing a model strictly for minimum misclassification may not always be ideal. Provide an example to illustrate your point. 2b) In the context of the example provided in 2a, discuss how the model could be optimized more effectively. Specifically, what additional information is needed if you know the probabilities \\(p(C_k|x)\\)?",
+    "answer": ""
+  },
+  {
+    "question": "3a) Formulate the likelihood of the training data given a model with a Lagrange/Laplace distribution. 3b) Express the negative log-likelihood for this model and simplify as much as possible. 3c) Assuming a Gaussian prior on the weights, write down the posterior distribution.",
+    "answer": ""
+  },
+  {
+    "question": "4) Describe how logistic regression, SVM with a Gaussian kernel, LDA, and another model using multiple 2D Gaussian kernels would draw the decision boundary for a given dataset. Analyze each model for 2 points each.",
+    "answer": ""
+  },
+  {
+    "question": "5a) Describe the K-fold cross-validation algorithm and its use in model selection. 5b) Define overfitting. Explain how it can be identified and prevented.",
+    "answer": ""
+  },
+  {
+    "question": "6a) Sketch the decision boundary of a decision tree with a maximum depth of 3 that perfectly classifies a given dataset on the training set. 6b) Draw the corresponding decision tree. 6c) Explain how random forests differ from bagged trees.",
+    "answer": ""
+  },
+  {
+    "question": "7b) In the decision function for SVM, \\(y(x) = w_0 + \\sum_n \\alpha_n t_n k(x_n, x)\\), describe the role and significance of \\(\\alpha_n\\).",
+    "answer": ""
+  },
+  {
+    "question": "8a) Between a convolutional neural network (CNN) with the specified layers and a multilayer perceptron (MLP) with two layers, which has more parameters and why? 8b) Which of the two architectures requires more floating-point operations and why?",
+    "answer": ""
+  },
+  {
+    "question": "?a) What is the objective function that should be minimized for Fisher's Linear Discriminant? Provide a formula or describe in words, defining all variables used. ?b) What is the solution for the optimal linear weights \\(w\\)?",
+    "answer": ""
+  },
+  {
+    "question": "? Given a covariance matrix \\(S = XX^T\\) decomposed into \\(S=ULU^T\\) where \\(U\\) is the matrix of eigenvectors and \\(L\\) is a diagonal matrix, describe how to choose \\(W\\) such that the transformed variable \\(Z=WX\\) has a covariance matrix of \\(I\\).",
+    "answer": ""
+  },
+  {
+    "question": "? Briefly describe the two steps of the Expectation-Maximization (EM) algorithm used in Gaussian Mixture Models.",
+    "answer": ""
+  },
+  {
+    "question": "? Design an original exam question and solution based on the content of the lecture or course materials. Points will be awarded based on correctness, creativity, and complexity.",
+    "answer": ""
+  },
+  {
+    "question": "1a) Use Bayes' Rule to write the probability of the parameters \\( \\theta \\) given the data \\( D \\). Specify which elements correspond to the posterior, the likelihood, the prior and the evidence. 1b) A Gaussian random variable \\( x \\in \\mathbb{R} \\) has probability density function (PDF): \\[ p(x) = \\frac{1}{\\sqrt{2\\pi\\sigma^2}} \\exp\\left(-\\frac{(x - \\mu)^2}{2\\sigma^2}\\right) \\] where \\( \\mu \\) and \\( \\sigma \\) are parameters of the distribution. Draw this PDF and clearly label how \\( \\mu \\) and \\( \\sigma \\) impact the curve.",
+    "answer": ""
+  },
+  {
+    "question": "2a) For classification, what is the decision rule that minimizes the classification error?",
+    "answer": ""
+  },
+  {
+    "question": "Suppose you are given a dataset of \\( N \\) training pairs \\( \\left\\{ (x*n, t_n) \\right\\}*{n=1}^{N} \\) such that \\( x_n \\in \\mathbb{R} \\), \\( t_n \\in \\mathbb{R} \\). We want to fit the following model to the data \\[ y = f(x) + \\varepsilon \\] where \\( f(x) = \\sum_{k=1}^{K} w_k \\sin(c_k x + d_k) \\) and \\( \\varepsilon \\sim \\mathcal{N}(0, \\alpha) \\). Model parameters include the weights \\( \\mathbf{w} = [w_1, ..., w_K]^T \\), the frequencies \\( \\mathbf{c} = [c_1, ..., c_K]^T \\), the phase shifts \\( \\mathbf{d} = [d_1, ..., d_K]^T \\) and the noise variance \\( \\alpha \\). 3a) Provide an analytic expression for \\( p(y|x, \\mathbf{w}, \\mathbf{c}, \\mathbf{d}, \\alpha) \\). 3b) Formulate the likelihood of the training data given this model, \\( p(\\mathbf{t}|x, \\mathbf{w}, \\mathbf{c}, \\mathbf{d}, \\alpha) \\). Include all terms and constants. 3c) Write the negative log-likelihood and simplify as much as possible. Include all terms and constants and write the summation in terms of a dot product \\( \\mathbf{w}^T\\boldsymbol{\\phi} \\). 3d) Suppose all parameters except for \\( w \\) are known. Give a closed-form expression for the optimal weight vector \\( \\mathbf{w} \\) that maximizes the data likelihood.",
+    "answer": ""
+  },
+  {
+    "question": "4a) Which of the following statements is correct? LDA = Linear Discriminant Analysis; LR = Logistic Regression; SVM = Support Vector Machine (\\[+0.5p each\\]) - [ ] Linear SVMs and LR usually lead to similar performance as they optimize similar objective functions. - [ ] LDA, LR and linear SVM yield the same linear discrimination boundary if the data are linearly separable. - [ ] Unlike for LDA and linear SVMs, the decision boundary for LR is not well defined when the classes are well separated.",
+    "answer": ""
+  },
+  {
+    "question": "5a) What is the solution for the optimal linear weights \\( w \\)? 5b) What probabilistic assumption about the data distribution leads to the same discriminant function?",
+    "answer": ""
+  },
+  {
+    "question": "6a) What shape does the optimal decision boundary have for a two-class problem where each class-conditional distribution is Gaussian?",
+    "answer": ""
+  },
+  {
+    "question": "7a) Specify an explicit feature mapping \\( x \\mapsto \\phi(x) \\) that would enable linear separation of \\( \\phi(X) \\). 7b) Sketch the dataset in the feature space \\( \\phi(X) \\). 7c) Sketch the resulting decision boundary in both graphs [original \\( x \\) and nonlinear features \\( \\phi(x) \\)].",
+    "answer": ""
+  },
+  {
+    "question": "8a) Denote by \\( \\{x*n, t_n\\}*{n=1}^{N} \\) the data, with \\( x_n \\in \\mathbb{R}^D \\), by \\( w \\in \\mathbb{R}^D \\) the weight vector, by \\( t_n \\in \\mathbb{R} \\) the regression targets, by \\( \\lambda > 0 \\) a regularization constant. Let \\( E(w) \\) be the regularized loss function \\[ E(w) = \\frac{1}{N} \\sum_{n=1}^{N} \\left(w^T x_n - t_n\\right)^2 + \\lambda \\|w\\|_1, \\] Calculate the gradient of \\( E(w) \\) with respect to \\( w \\).",
+    "answer": ""
+  },
+  {
+    "question": "9a) Describe the K-fold cross-validation algorithm for model selection. 9b) Define over-fitting and explain how one can identify it.",
+    "answer": ""
+  },
+  {
+    "question": "10) Write down the decision function \\( y(x) \\) of a Support Vector Machine in terms of support vectors \\( x_n \\), targets \\( t_n \\), and kernel \\( k(x', x) \\).",
+    "answer": ""
+  },
+  {
+    "question": "11a) Sketch the decision boundary of a decision tree of maximum depth 3 that classifies this dataset without error on the training set. 11b) Construct the corresponding decision tree. 11c) Sketch the value of the Gini index for splits along the variable \\( x \\) in the following dataset.",
+    "answer": ""
+  },
+  {
+    "question": "12a) How do random forests differ from bagged trees?",
+    "answer": ""
+  },
+  {
+    "question": "13a) Write out symbolically the mapping \\( x \\mapsto y \\) using \\( g \\), \\( W \\) and \\( V \\). 13b) Calculate the gradient of the loss function with respect to the weights \\( W \\), \\( V \\) for a single input \\( x \\).",
+    "answer": ""
+  },
+  {
+    "question": "14a) What is the receptive field size in pixels of a unit in the second layer above described? 14b) How many parameters does the network have? Let’s assume we don’t use biases in the convolutional layers. You can write down the formula without calculating the final result.",
+    "answer": ""
+  },
+  {
+    "question": "15a) What objective function does PCA minimize? 15b) State the probabilistic generative model underlying Probabilistic PCA with a \\( K \\)-dimensional latent space and observations \\( x \\in \\mathbb{R}^D \\). Define all three random variables and their distribution.",
+    "answer": ""
+  },
+  {
+    "question": "16a) Briefly describe the two steps performed in each iteration of the K-means algorithm.",
+    "answer": ""
   }
 ]
