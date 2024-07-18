@@ -1,150 +1,134 @@
 [
   {
-    "question": "Write the posterior distribution of the parameters given the data. Clearly identify and label the prior, likelihood, and evidence components in your response.",
-    "answer": ""
+    "question": "What are the stages involved in developing a language model?",
+    "answer": "- Stage 1: Building<br>  - Data & Preparation<br>  - LLM Architecture<br>- Stage 2: Pretraining<br>  - Pre-train<br>  - Training Loop<br>- Stage 3: Fine-Tuning<br>  - Model Evaluation<br>  - Fine-tune"
   },
   {
-    "question": "Describe the optimal decision boundary for a classification scenario involving two classes. Each class follows a class-conditional distribution represented as a bivariate normal distribution: \\(N(\\begin{pmatrix} 0 \\\\ 0 \\end{pmatrix}, \\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix})\\) and \\(N(\\begin{pmatrix} 0 \\\\ 0 \\end{pmatrix}, \\begin{pmatrix} 4 & 0 \\\\ 0 & 4 \\end{pmatrix})\\).",
-    "answer": ""
+    "question": "What is the main purpose of a language model?",
+    "answer": "- To predict the next word given some context.<br>- Example: LLMs learn to predict one word at a time from a sequence of text."
   },
   {
-    "question": "Evaluate the following statements and decide whether each is correct: 1. (Specific statement regarding L1 and possibly L2 loss needs details) 2. 'Logistic loss is generally more suitable for classification tasks than L2 loss.' 3. 'L2 regularization tends to produce sparse models.' 4. (Specific statement about L1 regularization needs details)",
-    "answer": ""
+    "question": "Why is data quality important for training language models?",
+    "answer": "- Quality of data impacts the model's ability to learn and reason.<br>- Filtering data ensures the model learns useful knowledge and improves reasoning ability."
   },
   {
-    "question": "Illustrate a scenario with \\(n = 10\\) data points where the classes in a binary classification setting are not linearly separable. Propose a feature mapping \\(\\phi\\) such that in the transformed feature space, the classes become linearly separable. Provide a sketch demonstrating the feature space and decision boundary.",
-    "answer": ""
+    "question": "What common architecture do most large language models (LLMs) use?",
+    "answer": "- Transformer architecture.<br>- Based on a self-attention mechanism.<br>- Outperforms recurrent and convolutional models through parallelization and scalability."
   },
   {
-    "question": "Provide three examples of unsupervised learning disciplines, and associate a specific method with each.",
-    "answer": ""
+    "question": "What are some issues with RNNs and LSTMs that Transformers overcome?",
+    "answer": "- RNNs:<br>  - Inherently sequential, inhibiting parallelization.<br>  - Vanishing gradient problem with longer sequences.<br>- LSTMs:<br>  - Do not scale well.<br>  - Memory issues.<br>  - No explicit modeling of long-short range dependencies.<br>  - Sequential computation inhibiting parallelization."
   },
   {
-    "question": "Evaluate four different partitions of a rectangular area into polygons to determine which ones could represent a decision tree: 1. Partition with non-axis-aligned, non-rectangular polygons. 2. Partition with only axis-aligned polygons, including one L-shaped polygon. 3. Two partitions that accurately represent decision trees.",
-    "answer": ""
+    "question": "Describe the self-attention mechanism in Transformers.",
+    "answer": "- Involves creating three matrices: Query (Q), Key (K), and Value (V).<br>- Weights for Q, K, and V are initially randomly assigned.<br>- Scores are normalized using the softmax activation function and scaled by the dimension.<br>- Example: For the phrase 'You are welcome', calculate the score for each word by the dot product of the Query vector with the keys vectors of all words."
   },
   {
-    "question": "What is the probabilistic assumption underlying L2 regularization?",
-    "answer": ""
+    "question": "What is Multi-Head Self-Attention in Transformers?",
+    "answer": "- Allows parallel functions to attend to different parts of the text.<br>- Performs attention multiple times (e.g., eight heads).<br>- Concatenates all attention heads and multiplies by a weight matrix \\( W_O \\)."
   },
   {
-    "question": "Between a multi-layer perceptron (MLP) and a convolutional neural network (CNN), which has more parameters? Which requires more floating-point operations to process an image, the MLP or the CNN?",
-    "answer": ""
+    "question": "What are the core and secondary parts of the Transformer Encoder?",
+    "answer": "- Core Parts:<br>  - Multi-Headed Attention<br>  - Feed Forward layer<br>- Secondary Parts:<br>  - Residual connections<br>  - Layer normalization<br>- Positional Encoding: Accounts for the order of words in the input sequence."
   },
   {
-    "question": "Create and solve an original problem related to the contents of this lecture. Points will be awarded based on the originality, difficulty, and correctness of your solution. Problems copied from this or the mock exam will not receive points.",
-    "answer": ""
+    "question": "What is the process of pretraining a language model?",
+    "answer": "- Data & Preparation<br>- LLM Architecture<br>- Pre-train<br>- Training Loop<br>- Uses large datasets and powerful hardware to train models.<br>- Think of it as compressing the internet."
   },
   {
-    "question": "1a) Define the product rule in probability. Using this rule, derive Bayes' theorem. 1b) Sketch the two-dimensional Gaussian distribution represented by the formula: \\[ \\frac{1}{(2\\pi)^{D/2} |\\Sigma|^{1/2}} \\exp\\left(-\\frac{1}{2}(x-\\mu)^T \\Sigma^{-1} (x-\\mu)\\right) \\] with \\(\\mu = [0, -1]^T\\) and \\(\\Sigma = \\left[ \\begin{array}{rr}1 & 1\\\\1 & 4\\\\\\end{array}\\right]\\).",
-    "answer": ""
+    "question": "What is Instruction Tuning in language models?",
+    "answer": "- Makes language models follow intent.<br>- Collects examples of instruction/output pairs across many tasks.<br>- Enhances the model's ability to follow human-like instructions."
   },
   {
-    "question": "2a) Discuss why optimizing a model strictly for minimum misclassification may not always be ideal. Provide an example to illustrate your point. 2b) In the context of the example provided in 2a, discuss how the model could be optimized more effectively. Specifically, what additional information is needed if you know the probabilities \\(p(C_k|x)\\)?",
-    "answer": ""
+    "question": "What are Zero-Shot and Few-Shot Learning in the context of prompting language models?",
+    "answer": "- Zero-Shot Learning: Prompting the model without providing examples.<br>  - Example: Q: Where was Tom Brady born? A: Tokyo (based on the context provided).<br>- Few-Shot Learning: Providing a set of a few examples to demonstrate the task.<br>- Improves model's performance by showing task-specific examples."
   },
   {
-    "question": "3a) Formulate the likelihood of the training data given a model with a Lagrange/Laplace distribution. 3b) Express the negative log-likelihood for this model and simplify as much as possible. 3c) Assuming a Gaussian prior on the weights, write down the posterior distribution.",
-    "answer": ""
+    "question": "What is Natural Language Generation (NLG)?",
+    "answer": "- Sub-field of Natural Language Processing (NLP)<br>- Comprises Natural Language Understanding (NLU) + NLG<br>- Focuses on producing fluent, coherent, and useful written or spoken text"
   },
   {
-    "question": "4) Describe how logistic regression, SVM with a Gaussian kernel, LDA, and another model using multiple 2D Gaussian kernels would draw the decision boundary for a given dataset. Analyze each model for 2 points each.",
-    "answer": ""
+    "question": "List some example uses of NLG.",
+    "answer": "- Machine Translation: Translates text from one language to another<br>- Dialogue Systems: Produces responses based on dialogue history and queries<br>- Text Summarization: Creates concise summaries from long documents<br>- Code Generation: Suggests new code or auto-completes based on surrounding code<br>- Data to Text: Converts table data into descriptive text<br>- Image Description: Generates textual descriptions from visual inputs"
   },
   {
-    "question": "5a) Describe the K-fold cross-validation algorithm and its use in model selection. 5b) Define overfitting. Explain how it can be identified and prevented.",
-    "answer": ""
+    "question": "What are the categories of NLG tasks based on the spectrum of open-endedness?",
+    "answer": "- Non-open-ended (Machine Translation): Limited diversity in output<br>- Moderately open-ended (Text Summarization, Task-driven Dialogue, Chit-Chat Dialogue): More diverse outputs<br>- Highly open-ended (Story Generation): Extremely diverse output space"
   },
   {
-    "question": "6a) Sketch the decision boundary of a decision tree with a maximum depth of 3 that perfectly classifies a given dataset on the training set. 6b) Draw the corresponding decision tree. 6c) Explain how random forests differ from bagged trees.",
-    "answer": ""
+    "question": "Explain the task of text summarization.",
+    "answer": "- Given input text \\(x\\), write a shorter summary \\(y\\) containing the main information of \\(x\\)<br>- Can be single-document or multi-document summarization<br>&nbsp;&nbsp;- Single-document: Abstract, outline, headline from one document<br>&nbsp;&nbsp;- Multiple-document: Gist of content from multiple documents"
   },
   {
-    "question": "7b) In the decision function for SVM, \\(y(x) = w_0 + \\sum_n \\alpha_n t_n k(x_n, x)\\), describe the role and significance of \\(\\alpha_n\\).",
-    "answer": ""
+    "question": "What are the main approaches to text summarization?",
+    "answer": "- Extractive Summarization: Selects phrases or sentences from the source document(s)<br>- Abstractive Summarization: Generates new text using natural language generation techniques<br>- Hybrid Approaches: Combines extractive and abstractive methods"
   },
   {
-    "question": "8a) Between a convolutional neural network (CNN) with the specified layers and a multilayer perceptron (MLP) with two layers, which has more parameters and why? 8b) Which of the two architectures requires more floating-point operations and why?",
-    "answer": ""
+    "question": "Describe the copying mechanism in seq2seq models for summarization.",
+    "answer": "- Helps seq2seq systems copy words/phrases from the input to the output<br>- Useful for summarization by providing a hybrid extractive/abstractive approach<br>- Formula: \\( P_w = p_{gen}P_{vocab}(w) + (1 - p_{gen})\\sum_{i:w_i=w} a_{ti} \\)"
   },
   {
-    "question": "?a) What is the objective function that should be minimized for Fisher's Linear Discriminant? Provide a formula or describe in words, defining all variables used. ?b) What is the solution for the optimal linear weights \\(w\\)?",
-    "answer": ""
+    "question": "What are the challenges associated with copying mechanisms in seq2seq models?",
+    "answer": "- Excessive copying can turn an abstractive system into an extractive one<br>- Lack of an overall content selection strategy, particularly for long inputs"
   },
   {
-    "question": "? Given a covariance matrix \\(S = XX^T\\) decomposed into \\(S=ULU^T\\) where \\(U\\) is the matrix of eigenvectors and \\(L\\) is a diagonal matrix, describe how to choose \\(W\\) such that the transformed variable \\(Z=WX\\) has a covariance matrix of \\(I\\).",
-    "answer": ""
+    "question": "What advancements did the transition to the Transformers era bring for text summarization?",
+    "answer": "- Reliance on self-attention mechanisms<br>- Allows more parallelization and better performance<br>- Models can consider entire sequences simultaneously, weighting the significance of each word"
   },
   {
-    "question": "? Briefly describe the two steps of the Expectation-Maximization (EM) algorithm used in Gaussian Mixture Models.",
-    "answer": ""
+    "question": "What is BERTSum and how does it work for extractive summarization?",
+    "answer": "- Adapted BERT model for extractive summarization<br>- Uses custom embeddings to distinguish multiple sentences within a document<br>- Employs an encoder similar to BERT and a ranking mechanism to select top sentences for summary"
   },
   {
-    "question": "? Design an original exam question and solution based on the content of the lecture or course materials. Points will be awarded based on correctness, creativity, and complexity.",
-    "answer": ""
+    "question": "Describe the PEGASUS model and its approach to abstractive summarization.",
+    "answer": "- Pre-training with Extracted Gap-sentences for Abstractive Summarization<br>- Gap Sentence Generation (GSG): Removes whole sentences from documents and tasks the model with recovering them<br>- Generates concise, abstractive summaries by condensing information efficiently"
   },
   {
-    "question": "1a) Use Bayes' Rule to write the probability of the parameters \\( \\theta \\) given the data \\( D \\). Specify which elements correspond to the posterior, the likelihood, the prior and the evidence. 1b) A Gaussian random variable \\( x \\in \\mathbb{R} \\) has probability density function (PDF): \\[ p(x) = \\frac{1}{\\sqrt{2\\pi\\sigma^2}} \\exp\\left(-\\frac{(x - \\mu)^2}{2\\sigma^2}\\right) \\] where \\( \\mu \\) and \\( \\sigma \\) are parameters of the distribution. Draw this PDF and clearly label how \\( \\mu \\) and \\( \\sigma \\) impact the curve.",
-    "answer": ""
+    "question": "What are the two main approaches to handling long documents in text summarization?",
+    "answer": "- Hierarchical Processing: Breaks document into chunks, summarizes each chunk, then builds a summary of summaries<br>- Improved Attention: Window-based attention with fixed-sized windows surrounding each token, combining with global attention for better context"
   },
   {
-    "question": "2a) For classification, what is the decision rule that minimizes the classification error?",
-    "answer": ""
+    "question": "What is ethics and why is it important in AI?",
+    "answer": "- Ethics is the study of what is good and bad, right and wrong.<br>- It aims to determine how one ought to live and what actions to take.<br>- In AI, ethics guides responsible use and addresses potential harm and fairness."
   },
   {
-    "question": "Suppose you are given a dataset of \\( N \\) training pairs \\( \\left\\{ (x*n, t_n) \\right\\}*{n=1}^{N} \\) such that \\( x_n \\in \\mathbb{R} \\), \\( t_n \\in \\mathbb{R} \\). We want to fit the following model to the data \\[ y = f(x) + \\varepsilon \\] where \\( f(x) = \\sum_{k=1}^{K} w_k \\sin(c_k x + d_k) \\) and \\( \\varepsilon \\sim \\mathcal{N}(0, \\alpha) \\). Model parameters include the weights \\( \\mathbf{w} = [w_1, ..., w_K]^T \\), the frequencies \\( \\mathbf{c} = [c_1, ..., c_K]^T \\), the phase shifts \\( \\mathbf{d} = [d_1, ..., d_K]^T \\) and the noise variance \\( \\alpha \\). 3a) Provide an analytic expression for \\( p(y|x, \\mathbf{w}, \\mathbf{c}, \\mathbf{d}, \\alpha) \\). 3b) Formulate the likelihood of the training data given this model, \\( p(\\mathbf{t}|x, \\mathbf{w}, \\mathbf{c}, \\mathbf{d}, \\alpha) \\). Include all terms and constants. 3c) Write the negative log-likelihood and simplify as much as possible. Include all terms and constants and write the summation in terms of a dot product \\( \\mathbf{w}^T\\boldsymbol{\\phi} \\). 3d) Suppose all parameters except for \\( w \\) are known. Give a closed-form expression for the optimal weight vector \\( \\mathbf{w} \\) that maximizes the data likelihood.",
-    "answer": ""
+    "question": "What are some common ethical considerations in AI research and development?",
+    "answer": "- Fairness: Ensuring no discrimination based on race, gender, age, etc.<br>- Transparency: Making development and use explainable.<br>- Accountability: Holding developers and users responsible.<br>- Privacy: Protecting individual data.<br>- Security: Preventing misuse through appropriate measures."
   },
   {
-    "question": "4a) Which of the following statements is correct? LDA = Linear Discriminant Analysis; LR = Logistic Regression; SVM = Support Vector Machine (\\[+0.5p each\\]) - [ ] Linear SVMs and LR usually lead to similar performance as they optimize similar objective functions. - [ ] LDA, LR and linear SVM yield the same linear discrimination boundary if the data are linearly separable. - [ ] Unlike for LDA and linear SVMs, the decision boundary for LR is not well defined when the classes are well separated.",
-    "answer": ""
+    "question": "Describe an example of bias in AI and its potential impact.",
+    "answer": "- Example: Deep neural networks identifying sexual orientation from facial images with high accuracy.<br>- Impact: Risk to privacy and safety, potential discrimination in employment, healthcare, and legal prosecution in some countries."
   },
   {
-    "question": "5a) What is the solution for the optimal linear weights \\( w \\)? 5b) What probabilistic assumption about the data distribution leads to the same discriminant function?",
-    "answer": ""
+    "question": "What are some methods to mitigate bias in AI models?",
+    "answer": "- Removing signals that lead to problematic outputs.<br>- Adding signals that ensure desired variables are considered.<br>- Paying attention to the performance on subgroups with the worst outcomes."
   },
   {
-    "question": "6a) What shape does the optimal decision boundary have for a two-class problem where each class-conditional distribution is Gaussian?",
-    "answer": ""
+    "question": "What is responsible AI and what principles does it encompass?",
+    "answer": "- Responsible AI ensures ethical, fair, transparent, and accountable AI system development.<br>- Principles include:<br>  - Fairness<br>  - Transparency<br>  - Accountability<br>  - Privacy<br>  - Security"
   },
   {
-    "question": "7a) Specify an explicit feature mapping \\( x \\mapsto \\phi(x) \\) that would enable linear separation of \\( \\phi(X) \\). 7b) Sketch the dataset in the feature space \\( \\phi(X) \\). 7c) Sketch the resulting decision boundary in both graphs [original \\( x \\) and nonlinear features \\( \\phi(x) \\)].",
-    "answer": ""
+    "question": "What are Datasheets for Datasets and Model Cards for Model Reporting?",
+    "answer": "- <b>Datasheets for Datasets:</b> Standardized documentation format for datasets to increase transparency and accountability.<br>- <b>Model Cards for Model Reporting:</b> Documentation for machine learning models to make them easier to understand, evaluate, and compare."
   },
   {
-    "question": "8a) Denote by \\( \\{x*n, t_n\\}*{n=1}^{N} \\) the data, with \\( x_n \\in \\mathbb{R}^D \\), by \\( w \\in \\mathbb{R}^D \\) the weight vector, by \\( t_n \\in \\mathbb{R} \\) the regression targets, by \\( \\lambda > 0 \\) a regularization constant. Let \\( E(w) \\) be the regularized loss function \\[ E(w) = \\frac{1}{N} \\sum_{n=1}^{N} \\left(w^T x_n - t_n\\right)^2 + \\lambda \\|w\\|_1, \\] Calculate the gradient of \\( E(w) \\) with respect to \\( w \\).",
-    "answer": ""
+    "question": "What are some biases that can affect data and model interpretation in AI?",
+    "answer": "- Reporting Bias: Shared information doesn't reflect real-world frequencies.<br>- Selection Bias: Sample doesn't represent a random population.<br>- Out-group Homogeneity Bias: Seeing outgroup members as more alike.<br>- Confirmation Bias: Searching for information that confirms preexisting beliefs."
   },
   {
-    "question": "9a) Describe the K-fold cross-validation algorithm for model selection. 9b) Define over-fitting and explain how one can identify it.",
-    "answer": ""
+    "question": "What are some challenges and benefits of responsible AI?",
+    "answer": "- Challenges:<br>  - Addressing biases.<br>  - Ensuring transparency.<br>  - Developing oversight mechanisms.<br>- Benefits:<br>  - Increased trust in AI systems.<br>  - Better decision-making.<br>  - More equitable outcomes."
   },
   {
-    "question": "10) Write down the decision function \\( y(x) \\) of a Support Vector Machine in terms of support vectors \\( x_n \\), targets \\( t_n \\), and kernel \\( k(x', x) \\).",
-    "answer": ""
+    "question": "Why is it important to question the purpose and potential harm of building an NLP model?",
+    "answer": "- To ensure the model does not reinforce biases or discrimination.<br>- To consider the ethical implications and potential societal impact.<br>- To remain mindful of the iterative nature of improving AI responsibly."
   },
   {
-    "question": "11a) Sketch the decision boundary of a decision tree of maximum depth 3 that classifies this dataset without error on the training set. 11b) Construct the corresponding decision tree. 11c) Sketch the value of the Gini index for splits along the variable \\( x \\) in the following dataset.",
-    "answer": ""
+    "question": "What is Automation Bias and how can it affect AI use?",
+    "answer": "- Automation Bias: The tendency to favor automated suggestions over contradictory information.<br>- It can lead to over-reliance on AI outputs, ignoring potentially correct human judgments."
   },
   {
-    "question": "12a) How do random forests differ from bagged trees?",
-    "answer": ""
-  },
-  {
-    "question": "13a) Write out symbolically the mapping \\( x \\mapsto y \\) using \\( g \\), \\( W \\) and \\( V \\). 13b) Calculate the gradient of the loss function with respect to the weights \\( W \\), \\( V \\) for a single input \\( x \\).",
-    "answer": ""
-  },
-  {
-    "question": "14a) What is the receptive field size in pixels of a unit in the second layer above described? 14b) How many parameters does the network have? Let’s assume we don’t use biases in the convolutional layers. You can write down the formula without calculating the final result.",
-    "answer": ""
-  },
-  {
-    "question": "15a) What objective function does PCA minimize? 15b) State the probabilistic generative model underlying Probabilistic PCA with a \\( K \\)-dimensional latent space and observations \\( x \\in \\mathbb{R}^D \\). Define all three random variables and their distribution.",
-    "answer": ""
-  },
-  {
-    "question": "16a) Briefly describe the two steps performed in each iteration of the K-means algorithm.",
-    "answer": ""
+    "question": "How can researchers and developers ensure responsible AI use?",
+    "answer": "- Acknowledge and document AI model use (Transparency).<br>- Ensure correctness, truthfulness, fairness, and appropriateness (Integrity).<br>- Adhere to integrity, be open to feedback, and disclose model limitations (Accountability)."
   }
 ]
