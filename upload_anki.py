@@ -5,12 +5,14 @@ import argparse
 import os
 import sys
 
+
 def preprocess_json_content(text):
     # Replace escaped double quotes with single quotes
     text = re.sub(r'\\"', "'", text)
     # Double escape backslashes for LaTeX, if not already escaped
     text = re.sub(r'(?<!\\)\\(?!\\)', r'\\\\', text)
     return text
+
 
 def create_deck(deck_name):
     try:
@@ -24,8 +26,10 @@ def create_deck(deck_name):
         response = requests.post('http://localhost:8765', data=payload)
         return response.json()
     except requests.exceptions.ConnectionError:
-        print("Anki is not reachable. Make sure Anki is running and configured to accept connections on 'http://localhost:8765'")
+        print(
+            "Anki is not reachable. Make sure Anki is running and configured to accept connections on 'http://localhost:8765'")
         sys.exit(1)
+
 
 def add_note(question, answer, deck_name):
     try:
@@ -50,8 +54,10 @@ def add_note(question, answer, deck_name):
         response = requests.post('http://localhost:8765', data=payload)
         return response.json()
     except requests.exceptions.ConnectionError:
-        print("Anki is not reachable. Make sure Anki is running and configured to accept connections on 'http://localhost:8765'")
+        print(
+            "Anki is not reachable. Make sure Anki is running and configured to accept connections on 'http://localhost:8765'")
         sys.exit(1)
+
 
 def main(deck_name):
     try:
@@ -88,7 +94,9 @@ def main(deck_name):
                 print(f"Failed to add card with question: {question}. Error: {result['error']}")
 
     except FileNotFoundError:
-        print("Error: 'flashcards.json' file not found in the current directory. Make sure the file exists and is in the same directory as the script.")
+        print(
+            "Error: 'flashcards.json' file not found in the current directory. Make sure the file exists and is in the same directory as the script.")
+
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Process JSON for Anki flashcards.')
