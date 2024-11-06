@@ -135,4 +135,4 @@ if __name__ == '__main__':
 
     main(args.deck_name)
 
-    input("Press Enter to exit...")  # Wait for user input to keep the console window open
+    print(f"Finished adding cards to {args.deck_name}")
