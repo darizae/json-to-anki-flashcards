@@ -1,18 +1,40 @@
+import os
 import json
 import re
 import requests
 import argparse
-import os
 import sys
+import subprocess
 
+def start_anki():
+    """Starts Anki if it is not already running."""
+    # Check if Anki is running
+    try:
+        # Try a request to Anki's API
+        response = requests.get('http://localhost:8765')
+        if response.status_code == 200:
+            print("Anki is already running.")
+            return True
+    except requests.exceptions.ConnectionError:
+        print("Anki is not running. Starting Anki...")
 
+    # Start Anki on macOS
+    try:
+        subprocess.Popen(["open", "-a", "Anki"])
+        print("Anki started successfully.")
+    except Exception as e:
+        print(f"Failed to start Anki automatically: {e}")
+        return False
+
+    return True
+
+# Your existing functions
 def preprocess_json_content(text):
     # Replace escaped double quotes with single quotes
     text = re.sub(r'\\"', "'", text)
     # Double escape backslashes for LaTeX, if not already escaped
     text = re.sub(r'(?<!\\)\\(?!\\)', r'\\\\', text)
     return text
-
 
 def create_deck(deck_name):
     try:
@@ -29,7 +51,6 @@ def create_deck(deck_name):
         print(
             "Anki is not reachable. Make sure Anki is running and configured to accept connections on 'http://localhost:8765'")
         sys.exit(1)
-
 
 def add_note(question, answer, deck_name):
     try:
@@ -58,8 +79,12 @@ def add_note(question, answer, deck_name):
             "Anki is not reachable. Make sure Anki is running and configured to accept connections on 'http://localhost:8765'")
         sys.exit(1)
 
-
 def main(deck_name):
+    # Ensure Anki is running
+    if not start_anki():
+        print("Exiting as Anki could not be started.")
+        sys.exit(1)
+
     try:
         # Get the current working directory
         current_directory = os.getcwd()
@@ -96,7 +121,6 @@ def main(deck_name):
     except FileNotFoundError:
         print(
             "Error: 'flashcards.json' file not found in the current directory. Make sure the file exists and is in the same directory as the script.")
-
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Process JSON for Anki flashcards.')
